@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="mid3.css">
+</head>
+<body>	
+<header>
+	<h1 id="top"><a href="http://www.kangnam.ac.kr"> ICT공학부</a></h1>
+</header>
+<nav>
+	<ul>
+		<li><a href="#A">ICT공학부 소개</a></li>
+		<li><a href="#B">교과과정</a></li>
+		<li><a href="#C">진출분야</a></li>
+	</ul>
+</nav>
+<hr>
+<section>
+	<article>
+		<h3>ict공학부 소개<a href="top"><img src="C:/media/arrow.png" height="20px" width="20px"></a></h3>
+		<div><img src="C:/media/beach.png" width="500px" height="250px"></div>
+	</article>
+	<hr style="display:block; border: #000000 0 none; border-top: #000000 1px solid; height: 1px">
+
+	<article>
+		<h3>교과과정<a href="top"><img src="C:/media/arrow.png" height="20px" width="20px"></a></h3>
+		<table  border="1px solid gray">
+			<thead>
+				<tr>
+					<th width="15%">학년</th><th width="15%">학기</th><th width="35%">소프트웨어전공</th><th width="35%">가상현실전공</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td rowspan="2">1학년</td>
+					<td>1학기</td>
+					<td colspan="2">소프트웨어개론  가상현실개론</td>
+				</tr>
+				<tr>
+					<td>2학기</td>
+					<td colspan="2"> C프로그래밍II  가상현실콘텐츠기초</td>
+				</tr>
+				<tr>
+					<td rowspan="2">2학년</td>
+					<td>1학기</td>
+					<td>자료구조  정보통신공학개론  디지털회로  자바프로그래밍</td>
+					<td>자료구조  정보통신공학개론  디지털회로  자바프로그래밍</td>
+				</tr>
+				<tr>
+					<td>2학기</td>
+					<td>자료구조  정보통신공학개론  디지털회로  자바프로그래밍</td>
+					<td>자료구조  정보통신공학개론  디지털회로  자바프로그래밍</td>		
+				</tr>
+			</tbody>
+		</table>
+	</article>
+	<hr>
+	<article>
+		<h3>진출분야 <a href="#top"><img src="C:/media/arrow.png" width="20px" height="20px"> </a></h3>
+		<p>소프트웨어, 정보통신 및 네트워크, 정보 보호, 데이터베이서, 웹 및 모바일 응용, 임베디드 시스템, 인공지능 빅데이터 분야 등에 특화된 교육과정을 통해 미래 사회를 이끌어갈 프로그래머를 배출하고 있습니다.</p>
+
+	</article>
+	<hr >
+
+</section>
+</body>
+</html>
