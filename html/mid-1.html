@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>mid-test1</title>
+	<style type="text/css">
+	*{background: aliceyellow;}
+	.grade{width: 100px;}
+	.first {width: 150px;}
+	.second{width: 150px;}
+	.third {font-weight: bold;}
+	.fourth {font-weight: bold;}
+
+	th{background: skyblue;}
+	td{text-align: center;}
+	td:hover {background: lightgray; color: white; cursor: pointer;} 
+
+	table{border: 3px solid lightgray; border-collapse: collapse;}
+
+	</style>
+</head>
+<body>
+	<table border="1">
+		<thead>
+			<tr>
+				<th rowspan="2" class="grade">학년</th><th colspan="2">학기</th>
+			</tr>
+			<tr>
+				<th class="first">1</th><th class="second">2</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="third">3</td><td>SW</td><td>VR</td>
+			</tr>
+			<tr>
+				<td class="fourth">4</td><td colspan="2">AI</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
