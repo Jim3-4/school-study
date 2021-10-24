@@ -1,0 +1,85 @@
+
+#include <iostream>
+#include <string>
+#include <cstdlib>
+using namespace std;
+
+// 연산자 추출
+char choiceOP(string str, int count)
+{
+    if (str[count] == ' ')
+        return str[count + 1];
+    else
+        return choiceOP(str, count + 1);
+}
+
+// 숫자 변환
+void transValue(string str, int& val1, int& val2)
+{
+    int len = str.length();
+    int jmpCount = 0; // 두번째 숫자 위치로 뛰어넘기 위함
+
+    for (int i = 0; i < len; i++)
+    {
+        // 첫번째 숫자
+        if (jmpCount == 0 && str[i] == ' ')
+        {
+            string s = str.substr(0, i);
+            const char* c1 = s.c_str();
+            val1 = atoi(c1);
+            jmpCount = i + 3; // 두번째 숫자로 위치 뛰어넘기
+        }
+
+        // 두번째 숫자
+        if (jmpCount != 0 && str[i] == ' ')
+        {
+            string s = str.substr(jmpCount, i - jmpCount);
+            const char* c2 = s.c_str();
+            val2 = atoi(c2);
+            return;
+        }
+    }
+}
+
+// 연산자 선택
+void setOper(string str, int count, int& val1, int& val2)
+{
+    count = 0;
+    char op = choiceOP(str, count); // 연산자 설정
+    switch (op)
+    {
+    case '+':
+        cout << val1 << ' ' << op << ' ' << val2 << " = " << val1 + val2 << endl;
+        return;
+    case '-':
+        cout << val1 << ' ' << op << ' ' << val2 << " = " << val1 - val2 << endl;
+        return;
+    case '*':
+        cout << val1 << ' ' << op << ' ' << val2 << " = " << val1 * val2 << endl;
+        return;
+    case '/':
+        cout << val1 << ' ' << op << ' ' << val2 << " = " << val1 / val2 << endl;
+        return;
+    default:
+        cout << val1 << ' ' << op << ' ' << val2 << " = " << val1 % val2 << endl;
+        return;
+    }
+}
+
+// main
+int main()
+{
+    string equation;
+    int count = 0;
+    int val1, val2;
+
+    while (1)
+    {
+        cout << "? ";
+        getline(cin, equation);
+        transValue(equation, val1, val2);
+        setOper(equation, count, val1, val2);
+    }
+
+    return 0;
+}
