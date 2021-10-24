@@ -1,0 +1,58 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void add(int a, int b) {
+	int res = a + b;
+	cout << a << "+" << b << "=" << res;
+}
+void minus1(int a, int b) {
+	int res = a - b;
+	cout << a << " - " << b << " = " << res;
+}
+void mul(int a, int b) {
+	int res = a * b;
+	cout << a << " * " << b << " = " << res;
+}
+void div1(int a, int b) {
+	int res = a / b;
+	cout << a << " / " << b << " = " << res;
+}
+void left(int a, int b) {
+	int res = a % b;
+	cout << a << " %" << b << " = " << res;
+}
+int main() {
+	while (true) {
+
+		cout << "?";
+		int a, b;
+		char c;
+		cin >> a >> c >> b;
+
+		switch (c) {
+		case '+':
+			add(a, b);
+			break;
+		case '-':
+			minus1(a, b);
+			break;
+		case '*':
+			mul(a, b);
+			break;
+		case '/':
+			div1(a, b);
+			break;
+		case '%':
+			left(a, b);
+			break;
+		}
+		cout << endl;
+	}
+
+	
+
+
+	return 0;
+}
