@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var today=new Date();
+	document.write("현재시간은"+today.toLocaleString()+"<br>");
+	var mystr=new String("안녕");
+	document.write("다음 입력글자는: "+mystr+"길이는 "+mystr.length);
+</script>
+</body>
+</html>
