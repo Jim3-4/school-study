@@ -27,6 +27,8 @@ bool RectManager::copy(Rect& dest, Rect& src) {
 int main() {
 	Rect a(3, 4), b(3, 4);
 	RectManager man;
+    man.copy(b,a);
+    
 	if (man.equals(a, b)) cout << "equals" << endl;
 	else cout << "not equals" << endl;
 
