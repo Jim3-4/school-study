@@ -4,7 +4,7 @@ using namespace std;
 
 int big(int a, int b, int c=100){
 	 
-	return (a > b ? a : b) > c ? c : (a > b ? a : b);
+	return (a > b ? a : b) > c ? c : (1a > b ? a : b);
 }
 int main() {
 	
