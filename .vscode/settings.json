@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "2021-10-22 실습1-2": "cpp"
+        "2021-10-22 실습1-2": "cpp",
+        "iostream": "cpp"
     }
 }
