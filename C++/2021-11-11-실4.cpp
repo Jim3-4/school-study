@@ -11,23 +11,24 @@ public:
 		this->punch = punch;
 	}
 	void show();
-	Power operator++(int op2);
+	friend Power operator+(int op1, Power op2);
 };
+
 void Power::show() {
 	cout << "kick" << kick << ", punch" << punch << endl;
 }
-Power Power::operator++(int op2) {
-	Power tmp = *this;
-	kick++;
-	punch++;
+
+Power operator+(int op1, Power op2) {
+	Power tmp;
+	tmp.kick = op1 + op2.kick;
+	tmp.punch = op1 + op2.punch;
 	return tmp;
 }
-
 int main() {
 	Power a(0, 0), b;
 	a.show();
 	b.show();
-	b = a++;
+	b = 2 + a;
 	a.show();
 	b.show();
 
