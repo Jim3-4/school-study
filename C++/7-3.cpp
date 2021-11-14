@@ -14,28 +14,15 @@ public:
 		cout << title << ' ' << price << "원 " << pages << " 페이지" << endl;
 	}
 	string getTitle() { return title; }
-	bool operator == (int price);
-	bool operator == (string title);
-	bool operator == ( Book& b);
+	bool operator! ();
 };
-bool Book::operator == (int price) {
-	if (this->price == price) return true;
-	else return false;
-}
-bool  Book::operator == (string title) {
-	if (this->title.compare(title) == 0) return true;
-	else return false;
-}
-bool  Book::operator == (Book& b) {
-	if (this->title.compare(b.title) == 0
-		&& this->title == b.title && this->pages == b.pages)return true;
+bool Book::operator!() {
+	if (this->price == 0) return true;
 	else return false;
 }
 int main() {
-	Book a("명품 C++", 30000, 500), b("고품 c++", 30000, 500);
-	if (a == 30000)cout << "정가 30000원" << endl;
-	if (a == "명품 C++")cout << "명품 C++ 입니다." << endl;
-	if (a == b)cout << "두 책이 같은 책입니다." << endl;
-
+	Book book("벼룩시장", 0, 50);
+	if (!book) cout << "공짜다" << endl;
+	return 0;
 	return 0;
 }
