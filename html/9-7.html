@@ -3,15 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <title>DOM 객체의 이벤트 리스너 프로퍼티에 함수 등록</title>
-<script>
-function f(e){alert(e.type);}
-document.getElementById("p").onmouseover=f;
-</script>
+
 </head>
 <body>
-	<p id="p">
-	마우스를 올려보세요
-	</p>
+	<p id="p">버튼을 클릭하면 이벤트 객체를 출력합니다.</p>
 	<button onclick="f(event)">클릭하세요</button>
+<script>
+function f(e){
+	var text="type:"+e.type+"<br>"
+	+"target:"+e.target+"<br>"+
+	"currentTarget:"+e.currentTarget+"<br>"+
+	"defaultTarget:"+e.defaultPrevented;
+
+	var p=document.getElementById("p");
+	p.innerHTML=text;
+}
+</script>	
 </body>
 </html>

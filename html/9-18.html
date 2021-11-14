@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		var sum=0;
+		function calc(cBox){
+			if(cBox.checked) sum+=parseInt(cBox.value);
+			else 			 sum-=parseInt(cBox.value);
+			document.getElementById("sumtext").value=sum;
+		}
+	</script>
+</head>
+<body>
+<form>
+	<label><input type="checkbox" name="hat" value="10000" onclick="calc(this)"> </label>
+	<label><input type="checkbox" name="shoes" value="30000" onclick="calc(this)"></label>
+	<label><input type="checkbox" name="bag" value="80000" onclick="calc(this)"></label><br>
+	<label>지불하신 금액 <input type="text" id="sumtext" value="0" name=""></label>
+</form>
+</body>
+</html>
