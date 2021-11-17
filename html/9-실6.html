@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		var size=100;
+		function wheel(e,obj){
+			
+			if(e.wheelDelta<0){
+				size=size-(size*0.05);
+				if(size<0){
+					size=0;
+				}
+			}else {
+				size=size+(size*0.05);
+			}
+			document.getElementById("div").style.width=size+"px";
+			document.getElementById("div").style.height=size+"px";
+
+		}
+	</script>
+</head>
+<body>
+<div ><img id="div" src="C:/media/puppy.png" alt="" width="100px" height="100px" onmousewheel="wheel(event, this)">
+</div>
+</body>
+</html>
