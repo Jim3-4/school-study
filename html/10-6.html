@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+<hr>
+<button onclick="moveLeft()">left</button>
+<button onclick="moveRight()">right</button>
+<button onclick="moveUp()">up</button>
+<button onclick="moveDown()">down</button>
+<button onclick="resizeUp()">+</button>
+<button onclick="resizeDown()">-</button>
+<script type="text/javascript">
+    var myWin;
+    myWin=window.open("","myWin","top=300, left=300, width=200, height=100");
+    myWin.document.write("<p> This is 'myWin'");
+    function moveLeft() {myWin.moveBy(-10.0);}
+    function moveRight() {myWin.moveBy(10,0);}
+    function moveUp() { myWin.moveUp(0,10);}
+    function moveDown(){ myWin.moveDown(0,-10);}
+    function resizeDown(){myWin.resizeBy(10,10);}
+    function resizeUp() {myWin.resizeBy(-10,-10);}
+</script>
+</body>
+</html>

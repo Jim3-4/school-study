@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title> 
+    <style type="text/css">
+        #logoDiv {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onbeforeprint =function (e){
+            logoDiv=document.getElementById("logoDiv");
+            logoDiv.style.display="block";
+        }
+        window.onafterprint=hideLogo;
+        function hideLogo(){
+            logoDiv=document.getElementById('logoDiv');
+            logoDiv.style.display='none';
+            logoDiv.style.zindex=-1;
+
+        }
+    </script>
+</head>
+<body>
+    <div id="logoDiv"><img src="C:/media/logo.png" alt="이미지없습니다."></div>
+    <p>안녕하세요. 브라우저 윈도우에서는 보이지 않지만, 프린트시에는 회사 로고가 출력되는 예
+제를 보입니다. 마우스 오른쪽 버튼을 눌러 인쇄 미리보기 메뉴를 선택해 보세요.</p>
+</body>
+</html>
