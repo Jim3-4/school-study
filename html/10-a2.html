@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><title>
+</head>
+<body>
+<img src="C:/media/naver.git", id="img" onmouseov
+er="startTimer(5000)" onmouseout="cancelTimer()">
+<script type="text/javascript">
+    var timerID=null;
+    function startTimer(time){
+        timerID=setTimeout("load('http://www.naver.com')",time);
+        document.getElementById('img').title="타이머작동시작";
+    }
+    function cancelTimer(){
+        if(timerID !=null){
+            clearTimeout(timerID);
+        }
+    }
+    function load(url){
+        window.location=url;
+    }
+</script>
+</body>
+</html>

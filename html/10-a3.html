@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+<div>
+    <span id="span" style="background-color: yellow;"> 
+    자동회전하는 텍스트입니다. </span>
+</div>
+<script type="text/javascript">
+    var span=document.getElementById('span');
+    var timerID=setInterval("doRotate()",200);
+
+    span.onclick=function (e){
+        span.clearInterval(timerID);
+    }
+
+    function doRatate(){
+        var str=span.innerHTML;
+        var fChar=str.substr(0,1);
+        var remains=str.substr(1,str.length-1);
+        str= remains+fChar;
+        span.innerHTML=str;
+    }
+</script>
+</body>
+</html>
