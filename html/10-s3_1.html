@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+</head>
+<script type="text/javascript">
+    function opWin(){
+        var select= document.getElementById('site');
+        var url=select.options[select.selectedIndex].value;
+        window.open(url," ","width=400, height=500");
+    }
+</script>
+<body onchange="opWin()">
+<select id="site">
+    <option value="http://www.naver.com">네이버</option>
+    <option value="http://www.google.com">구글</option>
+    <option value="http://www.daum.net">다음</option>
+
+</select>
+</body>
+</html>
