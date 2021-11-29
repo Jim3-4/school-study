@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head><title>jQuery Basic</title>
+<script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+<style type="text/css">
+    #box{ width: 100px; height: 100px; background-color: red;}
+    #box.hover{background-color: blue; border-radius: 50px;}
+</style>
+<script>
+$(document).ready(function () {
+$('h1').hover(function () {
+$(this).css({ // 색상 변경
+background: 'red',
+color: 'white'
+});
+}, function () { // 색상 제거
+$(this).css({
+background: '',
+color: ''
+});
+});
+});
+
+</script>
+
+</head>
+<body>
+    <h1>click</h1>
+</body></html>
