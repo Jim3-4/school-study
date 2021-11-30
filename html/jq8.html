@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+<meta charset="UTF-8">
+<title>제이쿼리 실습1</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<style type="text/css">
+    .box{
+        width: 100px;
+        height: 100px;
+        background-color: #98bf21;
+    };
+</style>
+<body>
+<div class="box">1번박스</div>
+<div id="result">마우스 위치</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.box').mouseenter(function(){
+            $('#result').text("1번박스로 마우스가 들어감");
+        });
+        $('.box').mouseleaver(function(){
+            $('#result').text("1번박스에서 마우스가 나감 ");
+        });
+    });
+</script>
+</body>
+</html>

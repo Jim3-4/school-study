@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+<p>지금은<span id="date"></span></p>
+<input type="button" id="button" value="몇시" onclick="get_date()">
+<script type="text/javascript">
+    function get_date(){
+        var d=new Date();
+        var date=d.getFullYear()+"년"+(d.getMonth()+1)+"월"+d.getDate()+d.getHours()+"시"+d.getMinutes()+"분 입니다";
+        document.getElementById("date").innerHTML=date;
+    }
+</script>
+</body>
+</html>
