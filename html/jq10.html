@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+<meta charset="UTF-8"><title>제이쿼리 실습9</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+</head>
+<body>
+<div>아이디</div><input type="text" id="userid">
+<div>비밀번호</div><input type="password" id="password">
+<script>
+$(document).ready(function(){
+$("#userid").focus(
+function() {
+$(this).css("background-color", "bisque");
+}
+);
+$("#password").focus(
+function() {
+$(this).css("background-color", "bisque");
+}
+);$("#userid").blur(
+function() {
+$(this).css("background-color", "#ffffff");
+if ($(this).val() == "") { // 빈 문자열
+alert("사용자 아이디를 입력해주세요!");
+$(this).focus();
+}
+}
+);
+$("#password").blur(
+function() {
+$(this).css("background-color", "#ffffff");
+}
+);
+});
+</script>
+</body>
+</html>

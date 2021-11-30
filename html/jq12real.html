@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko"> <meta charset="UTF-8"><title>애니메이션</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+<style>
+img {
+width: 200px;
+position: absolute;
+background-color: azure;
+}
+</style>
+</head>
+<body>
+<button id="button">열려라</button>
+<div><img src="C:\media\apple.png"/></div>
+<script>
+$(document).ready(function(){
+$("#button").click(function(){
+$("img").animate({
+height: 'toggle'
+});
+});
+});
+</script>
+</body></html>

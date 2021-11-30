@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko"><meta charset="UTF-8"><title> 애니메이션 </title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+img {
+height:150px; width:150px; top:100px; left:100px;
+position: absolute; opacity:0.5;
+}
+</style>
+</head>
+<body>
+<button id="left_button">확대/오른쪽</button>
+<button id="right_button">축소/왼쪽</button>
+<img src="media\apple.png">
+<script>
+$(document).ready(function(){
+$("#left_button").click(function(){
+$("img").animate({
+left:'300px', opacity:'1', height:'400px', width:'400px'
+});
+});
+$("#right_button").click(function(){
+$("img").animate({
+left:'100px', opacity:'0.5', height:'150px', width:'150px'
+});
+});
+});
+</script></body></html>

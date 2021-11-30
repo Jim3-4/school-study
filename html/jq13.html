@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko"> <meta charset="UTF-8"><title>애니메이션</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+<style>
+div{
+    background: #586BFF;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+}
+</style>
+</head>
+<body>
+<button>시작</button>
+<div>안녕</div>
+<script>
+    $(document).ready(function(){
+        $('button').click(function(){
+            var div=$('div');
+            div.animate({height:'300px',opacity:0.4},"slow" );
+            div.animate({width: '300px', opacity: '0.8', fontSize: '4em'}, "slow");
+div.animate({height: '100px', opacity: '0.4'}, "slow");
+div.animate({width: '100px', opacity: '0.8', fontSize: '2em'}, "slow");
+        });
+    });
+</script>
+</body></html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+<meta charset="UTF-8">
+<title>자바스크립트 실습 5</title>
+</head>
+<body>
+<form>
+<input type="text" size="10" id="var1">
+<input type="text" size="10" id="var2">
+<div>답은 <span id="result"></span></div>
+<input type="button" id="button" value="더하기" onclick="sum()">
+</form>
+<script>
+var var1 = 0;
+var var2 = 0;
+var var_result = "";
+function sum() {
+var1 = document.getElementById("var1").value;
+var2 = document.getElementById("var2").value;
+var_result = document.getElementById("result");
+var_result.innerHTML = parseInt(var1) + parseInt(var2);
+}
+</script>
+</body>
+</html>

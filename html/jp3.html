@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+<meta charset="UTF-8">
+<title>제이쿼리 실습1</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<button id="hide_button">숨김</button>
+<button id="show_button">보이기</button>
+<img src="C:/media/apple.png">
+<script type="text/javascript">
+$('document').ready(function(){
+
+    $('#show_button').hide();
+    $('hide_button').click(function(){
+        $('img').hide();
+        $('#hide_button').hide();
+        $('#show_button').show();
+    });
+    $('#show_button').click(function(){
+        $('img').show();
+        $('#show_button').hide();
+        $('#hide_button').show();
+    });
+});
+
+</script>
+</body>
+</html>

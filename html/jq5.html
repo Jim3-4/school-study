@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+<meta charset="UTF-8">
+<title>제이쿼리 실습1</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<img src="C:/media/apple.png"><br>
+<button id="buttona1">1번 버튼</button>
+<button id="buttona2">2번 버튼</button>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('img').click(function(){
+            alert("그림클릭");
+        });
+        $('#buttona1').click(function(){
+            alert('버튼 클릭');
+        });
+        $('#buttona2').click(function(){
+            alert("버튼 2");
+        });
+    });
+</script>
+<body>
+
+</body>
+</html>

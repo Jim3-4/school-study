@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+<meta charset="UTF-8"><title>페이드 인/아웃</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<div>
+<button id="fadeout">페이드 아웃</button>
+<button id="fadein">페이드 인</button>
+</div>
+<div>
+<img src="C:\media\apple.png"/>
+</div>
+<script>
+$(document).ready(function() {
+$("#fadeout").click(function() {
+$("img").fadeOut("slow");
+});
+$("#fadein").click(function() {
+$("img").fadeIn("slow");
+});
+});
+</script>
+</body>
+</html>
