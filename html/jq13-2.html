@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+<style type="text/css">
+    div{
+        background: #586BFF; height: 100px;
+        width: 100px;position: absolute;
+    }
+</style>
+</head>
+<body>
+<button>시작</button>
+<div>안녕!</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("button").click(function(){
+            var div=$("div");
+            div.animate({height:'300px', opacity:'0.4'},"slow");
+            div.animate({height:'300px', opacity:'0.8',fontSize:'4em'},"slow");
+            div.animate({height:'100px', opacity:'0.4'},"slow");
+            div.animate({height:'100px', opacity:'0.8',fontSize:'2em'}, "slow");
+        });
+    });
+</script>
+</body>
+</html>
