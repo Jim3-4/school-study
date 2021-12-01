@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+<meta charset="UTF-8"><title>POST</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<div><button>서버에서 가져오기</button></div>
+<div>아이디</div><div><input type="text" id="userid" name=""></div>
+<div>비밀번호</div><div><input type="text" id="pass" name=""></div>
+<div id="label"><!--결과표시--></div>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("button").click(function(){
+        var userid=$("#userid");
+        $.ajax({
+            url:"http://www.abcds.kr/study/s3.php";
+            type:"GET";
+            data:{id:userid.val(), pass:pass.val()},
+            success:function(data){
+                var obj=$.parseJSON(data);
+                $("#label").html("입력하신아이디는"+obj.id+"이고"+"비밀번호는"+obj.pass+"입니다.");
+                alert("정상적으로 로그인이 되었습니다.");
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>

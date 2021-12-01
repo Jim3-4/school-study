@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+<form id="myForm">
+    <input type="radio" name="city" value="seoul">서울</input>
+    <input type="radio"  name="city" value="pusan">부산</input>
+    <input type="radio" name="city" value="daegu">대구</input>
+</form>
+<div>선택된 도시: <span id="result"></span></div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#myForm").on('change',function(){
+            var selVal=$("input[name='city']:checked").val();
+            $("#result").text(selVal);
+        });
+    });
+</script>
+</body>
+</html>

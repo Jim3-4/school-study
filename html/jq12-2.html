@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+<style type="text/css">
+    img{
+        width:200px; position: absolute; background-color: azure;
+    }
+</style>
+</head>
+<body>
+<button id="button"> 열려라</button>
+<div><img src="C:/media/apple.png"></div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#button').click(function(){
+            $('img').animate({
+                height:'toggle'
+            });
+        });
+    });
+</script>
+</body>
+</html>
