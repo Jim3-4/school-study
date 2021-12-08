@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html><head><title>201801167 김지민 기말 2번</title>
+	<script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+<style type="text/css">
+		*{font-size: 15px; }
+		img{
+			width: auto;
+			height: 200px;
+			border: 20px ridge wheat;
+		}
+		table{
+			padding-left: 100px;
+		}
+	</style>
+<script>
+
+var files = ["C:/image/penguins.png", "C:/image/lighthouse.png",
+ "C:/image/Chrysanthemum.png","C:/image/Desert.png"
+
+];
+var imgs = new Array();
+for(var i=0; i<files.length; i++) { 
+imgs[i] = new Image(); 
+imgs[i].src = files[i]; 
+}
+
+
+$(document).ready(function(){
+	var i=0;
+	$("img").attr({
+		width:auto,
+		height:200,
+		border-width:20,
+		border-style:ridge,
+		border-color:wheat
+	})
+	$("#before").click(function(){
+		if(i<=0){i=3;}
+		$("img").src=imgs[i].src;
+	});
+	$("#next").click(function(){
+		if(i>4){i=0;}
+		$("img").src=imgs[i].src;
+	});
+
+});
+</script></head>
+<body>
+<h3>이미지 갤러리</h3>
+<hr>
+<p></p>
+<img src="C:/image/penguins.png" alt="."  ><br>
+<table >
+	<tr>
+		<td><button id="before">이전</button></td>
+		<td><button id="next">이후</button></td>
+	</tr>
+</table>
+</body>
+</html>
